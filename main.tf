@@ -40,7 +40,6 @@ resource "tencentcloud_security_group" "sg" {
 resource "tencentcloud_security_group_rule" "allow_ssh" {
   security_group_id = tencentcloud_security_group.sg.id
   type              = "ingress"
-  protocol          = "TCP"
   port_range        = "22"
   cidr_ip           = "0.0.0.0/0"
   policy            = "ACCEPT"

@@ -14,6 +14,7 @@ provider "tencentcloud" {
 
 resource "tencentcloud_instance" "simple_vm" {
   instance_name     = "simple-vm"
+  availability_zone = "ap-guangzhou-2"
   image_id          = "img-9qabwvbn"  # Ubuntu 20.04 LTS image ID (example, verify in your account)
   instance_type     = "S1.SMALL1"
   system_disk_type  = "CLOUD_PREMIUM"
